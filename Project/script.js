@@ -20,8 +20,10 @@ let appData = {
 let expensesTitle = prompt("Введите обязательную статью расходов в этом месяце", "");
 let expensesPrice = prompt("Во сколько обойдется?", "0");
 
-appData.optionalExpenses = {expensesTitle, expensesPrice};
+appData.optionalExpenses = {
+    expensesTitle: expensesPrice
+};
 
-alert("Ваш бюджет на один день: " + (money/30));
+alert("Ваш бюджет на один день: " + Math.floor(money / 30));
 
 console.log(appData.optionalExpenses);
